@@ -1,0 +1,50 @@
+def pricing(n,x):
+    def pricing1():
+        total = 0.13 * n * x
+        print(total, 'USD')
+
+    def pricing2():
+        total = 0.12 * n * x
+        print(total, 'USD')
+
+    def pricing3():
+        total = 0.10 * n * x
+        print(total, 'USD')
+
+    def pricing4():
+        total = 0.11 * n * x
+        print(total, 'USD')
+
+    def pricing5():
+        total = 0.15 * n * x
+        print(total, 'USD')
+
+    def pricing6():
+        total = 0.9 * n * x
+        print(total, 'USD')
+
+    print("1. Asia pacific(Hong-kong)")
+    print("2. Asia pacific(Tokyo)")
+    print("3. US East(N. virginia)")
+    print("4. Asia pacific(Mumbai)")
+    print("5. US East(Verizon)-New York")
+    print("6. Asia pacific(Mumbai)")
+    ans = int(input("Select the Region"))
+    print("your monthly cost :: ")
+
+    if (ans == 1):
+        pricing1()
+    if (ans == 2):
+        pricing2()
+    if (ans == 3):
+        pricing3()
+    if (ans == 4):
+        pricing4()
+    if (ans == 5):
+        pricing5()
+    if (ans == 6):
+        pricing6()
+
+instance = int(input("Enter number of instance you need:: "))
+storage = int(input("Enter the ebs storage you need (GB):: "))
+pricing(instance,storage)
